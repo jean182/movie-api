@@ -1,0 +1,97 @@
+AllCops:
+  Exclude:
+    - "db/schema.rb"
+    - "db/migrate/*.rb"
+    - ".bundle/**/*"
+    - "bin/**/*"
+    - "vendor/**/*"
+    - "**/config/**/*"
+    - spec/rails_helper.rb
+    - spec/spec_helper.rb
+  TargetRubyVersion: 2.6
+
+Rails:
+  Enabled: true
+
+Metrics/AbcSize:
+  Max: 25
+  Exclude:
+    - "db/**/*"
+
+Metrics/LineLength:
+  Max: 130
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - "db/**/*"
+
+Metrics/BlockLength:
+  Max: 40
+  Exclude:
+    - "spec/**/*"
+    - "config/routes.rb"
+
+Metrics/ClassLength:
+  Max: 150
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - "app/controllers/**/*"
+
+Style/Documentation:
+  Exclude:
+    - "db/**/*"
+    - "app/controllers/**/*"
+    - "app/decorators/**/*"
+    - "app/helpers/**/*"
+    - "app/mailers/**/*"
+    - "app/models/**/*"
+    - "app/serializers/**/*"
+    - "app/policies/**/*"
+    - "app/validators/**/*"
+    - "db/**/*"
+    - "spec/**/*"
+
+Layout/EmptyLinesAroundBlockBody:
+  Exclude:
+    - "spec/**/*"
+    - "lib/tasks/*.rake"
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+  Exclude:
+    - "db/**/*"
+
+Layout/EmptyLinesAroundModuleBody:
+  EnforcedStyle: empty_lines
+
+Layout/ExtraSpacing:
+  Exclude:
+    - "db/migrate/*"
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Layout/SpaceBeforeFirstArg:
+  Exclude:
+    - "spec/factories/**/*"
+    - "db/migrate/*"
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/TrivialAccessors:
+  ExactNameMatch: true
